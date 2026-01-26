@@ -35,9 +35,9 @@ If you skip Supabase values, the app will continue to run with mock data.
 
 1. Push this repo to your Git provider.
 2. Create a new Cloudflare Pages project and connect the repo.
-3. Set the framework preset to Next.js (or use the defaults).
-4. Build command: `npm run build`
-5. Build output directory: `.next`
+3. Set the framework preset to Next.js.
+4. Build command: `npm run pages:build`
+5. Build output directory: `.vercel/output/static`
 6. Add the environment variables from `.env.local` in the Pages dashboard.
 
 ## Optional Supabase backend

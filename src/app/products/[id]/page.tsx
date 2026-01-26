@@ -3,15 +3,16 @@ import Link from "next/link";
 import { products } from "@/data/products";
 
 type ProductPageProps = {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 };
 
 export function generateStaticParams() {
   return products.map((product) => ({ id: product.id }));
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = products.find((item) => item.id === params.id);
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { id } = await params;
+  const product = products.find((item) => item.id === id);
 
   if (!product) {
     return (
