@@ -1,5 +1,28 @@
 Below is a ready-to-copy set of English prompts you can give to ChatGPT 5.2 Codex, plus where you must click/do things manually (GitHub + Cloudflare). I've kept them concise and sequential so you can run them one-by-one.
 
+## Live site
+
+Public Cloudflare Pages URL: `https://shop-website-01.pages.dev`
+
+## How to update the public site
+
+1. Make your code or content changes in this repo.
+2. Test locally with `npm run dev` if you want to verify the change before publishing.
+3. Commit the changes.
+4. Push the branch that Cloudflare Pages is tracking, currently `main`.
+5. Open Cloudflare Pages and wait for the deployment triggered by that push.
+6. Check the deployment logs if the build fails.
+7. After the deployment succeeds, verify the result at `https://shop-website-01.pages.dev`.
+8. If the new version does not appear, redeploy the latest successful commit from Cloudflare Pages.
+
+### Manual checks in Cloudflare Pages
+
+1. Open Workers & Pages.
+2. Open the `shop-website-01` Pages project.
+3. Confirm the latest Git commit is listed under Deployments.
+4. Confirm the deployment status is `Success`.
+5. Open the production URL and confirm the page reflects the new change.
+
 ## Prompt Set (use in order)
 
 ### Prompt 1 - Scaffold + base setup
